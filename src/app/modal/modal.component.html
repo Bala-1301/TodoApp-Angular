@@ -1,0 +1,12 @@
+<div id="modal">
+  <p>Add Todo</p>
+  <div>
+    <input
+      [type]="'text'"
+      (focus)="(true)"
+      [(ngModel)]="todoDesc"
+      autofocus="enable"
+    />
+    <button mat-stroked-button (click)="handleAddTodo()">Add</button>
+  </div>
+</div>

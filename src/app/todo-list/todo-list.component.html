@@ -1,0 +1,31 @@
+<div id="container">
+  <header>
+    <h1>Todo List</h1>
+  </header>
+  <div id="todo-list">
+    <div>
+      <p>Pending</p>
+      <ul *ngFor="let todo of todos">
+        <li *ngIf="!todo.isDone">
+          <app-todo [todo]="todo"></app-todo>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p>Completed</p>
+      <ul *ngFor="let todo of todos">
+        <li *ngIf="todo.isDone">
+          <app-todo [todo]="todo"></app-todo>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="fab-div">
+    <button mat-fab color="accent" (click)="handleAddTodo()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="showAddTodo">
+    <app-modal (addTodoEvent)="addTodo()"></app-modal>
+  </div>
+</div>

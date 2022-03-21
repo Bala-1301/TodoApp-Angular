@@ -1,0 +1,1 @@
+.todo{border-radius:15px;border:2px solid;width:300px;display:flex;justify-content:space-between;padding:10px}.todo p{text-align:center}.todo div:last-child{display:flex;align-items:center;justify-content:space-between}.todo div:last-child mat-icon{color:red}.small{font-size:12px;color:grey}

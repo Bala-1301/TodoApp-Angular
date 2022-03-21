@@ -1,0 +1,45 @@
+#fab-div {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+#fab-div button {
+  background-color: #b261e8;
+}
+
+#fab-div button mat-icon {
+  color: white;
+}
+
+#fab-div button:hover mat-icon {
+  transform: scale(1.4);
+  transition: transform 0.5s;
+}
+
+header {
+  text-align: center;
+}
+
+#todo-list {
+  display: flex;
+  justify-content: center;
+}
+
+#todo-list ul li {
+  display: inline;
+}
+
+#todo-list div {
+  width: 350px;
+}
+
+#todo-list p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#container {
+  margin-top: 20px;
+}

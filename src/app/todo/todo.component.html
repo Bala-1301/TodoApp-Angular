@@ -1,0 +1,19 @@
+<div
+  class="todo"
+  [ngStyle]="{ 'border-color': todo.isDone ? 'grey' : 'green' }"
+>
+  <div>
+    <p>{{ todo.desc | titleCase }}</p>
+    <p class="small">Craeted: {{ todo.createdAt | date: "dd MMM, hh:MM" }}</p>
+  </div>
+  <div
+    [ngStyle]="{
+      width: todo.isDone ? '90px' : '150px'
+    }"
+  >
+    <button (click)="todo.isDone ? handleUndo() : handleDone()">
+      {{ todo.isDone ? "Undo" : "Mark As Done" }}
+    </button>
+    <mat-icon (click)="handleDelete()">delete</mat-icon>
+  </div>
+</div>
