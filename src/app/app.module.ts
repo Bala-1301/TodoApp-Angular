@@ -9,9 +9,13 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ModalComponent } from './modal/modal.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import {
+  FirebaseAppModule,
+  initializeApp,
+  provideFirebaseApp,
+} from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { HttpClientModule } from '@angular/common/http';
@@ -37,6 +41,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MatButtonModule,
     MatIconModule,
     FormsModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
     HttpClientModule,

@@ -26,7 +26,6 @@ export class TodoService implements OnInit {
   getTodos() {
     this.fetchTodos().subscribe((data: any) => {
       this.todos = data || [];
-      console.log(this.todos);
       let pending = 0,
         completed = 0;
       this.todos.forEach((todo: Todo) => {
